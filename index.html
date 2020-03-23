@@ -8,19 +8,19 @@
 </head>
 
 <body>
+    <input type="text" id="copyLink" value="" style="display:block;height:0">
     <button id="btn1">点我复制</button>
+    <div style="height: 5000px;"></div>
     <script>
         var btn = document.querySelector('#btn1');
         btn.addEventListener('click', function () {
-            var input = document.createElement('input');
-            input.value = new Date().getSeconds();
-            document.body.appendChild(input);
+            var input = document.getElementById('copyLink');
+            input.value = "https://www.baidu.com/" + new Date().getSeconds() + ".html";
             input.select();
             if (document.execCommand('copy')) {
                 document.execCommand('copy');
                 alert(document.execCommand('copy'));
             }
-            document.body.removeChild(input);
         });
     </script>
 </body>
