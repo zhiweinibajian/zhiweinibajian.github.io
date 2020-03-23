@@ -1,1 +1,26 @@
-<audio src="blob:http://pullhls60ff766a.live.126.net/live/de576df40e5c4055b17604847f9f0432/playlist.m3u8" controls></audio>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="demoInput" value="hello world">
+    <button id="btn1">点我复制</button>
+    <script>
+        var btn = document.querySelector('#btn1');
+        btn.addEventListener('click', () => {
+            var input = document.querySelector('#demoInput');
+            input.select();
+            if (document.execCommand('copy')) {
+                document.execCommand('copy');
+                alert(document.execCommand('copy'));
+            }
+        });
+    </script>
+</body>
+
+</html>
