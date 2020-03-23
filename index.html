@@ -12,7 +12,7 @@
     <button id="btn1">点我复制</button>
     <script>
         var btn = document.querySelector('#btn1');
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', function () {
             var input = document.querySelector('#demoInput');
             input.select();
             if (document.execCommand('copy')) {
