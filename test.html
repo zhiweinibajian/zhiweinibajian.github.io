@@ -19,7 +19,9 @@
             // 检查用户是否同意接受通知
             else if (Notification.permission === "granted") {
                 // If it's okay let's create a notification
-                var notification = new Notification("Hi there!");
+                var notification = new Notification("Hi there!", {
+                    body: "hi,boy"
+                });
             }
 
             // 否则我们需要向用户获取权限
@@ -27,10 +29,13 @@
                 Notification.requestPermission(function (permission) {
                     // 如果用户同意，就可以向他们发送通知
                     if (permission === "granted") {
-                        var notification = new Notification("Hi there!");
+                        var notification = new Notification("Hi there!", {
+                            body: "hi,boy"
+                        });
                     }
                 });
             }
+            console.log(Notification.permission);
 
 
             // 最后，如果执行到这里，说明用户已经拒绝对相关通知进行授权
