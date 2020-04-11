@@ -8,7 +8,22 @@
 </head>
 
 <body>
-    <textarea placeholder="请输入内容" maxlength="300"></textarea>
+    <div>
+        <textarea placeholder="未加逻辑的输入框" maxlength="300"></textarea>
+    </div>
+    <div>
+        <textarea placeholder="加逻辑的输入框,限制两行,300字" maxlength="300" id="textarea"
+            style="width:100px;height:300px"></textarea>
+    </div>
+    <!-- <button id="button">click</button> -->
+    <script>
+        document.getElementById("textarea").oninput = function (e) {
+            e.target.value = e.target.value.replace(/\n{3,}/g, "\n\n");
+            e.target.value = e.target.value.slice(0, 300);
+        }
+
+
+    </script>
 </body>
 
 </html>
