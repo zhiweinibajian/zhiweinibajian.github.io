@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<meta name="generator" content="Hugo 0.71.0" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   
-  <link rel="canonical" href="/" />
+  <link rel="canonical" href="/post/first/" />
   
-  <meta name="description" content="My New Hugo Site">
+  <meta name="description" content="First">
   
   <title>
 	  
-	    My New Hugo Site
+	    First | My New Hugo Site
 	  
   </title>
 
+  
+  <meta property="og:site_name" content="My New Hugo Site" />
+  <meta property="og:locale" content="en-us" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="First" />
+  <meta property="og:description" content="First | My New Hugo Site" />
+  <meta property="og:url" content="/post/first/" />
   
 
   <link rel="stylesheet" href="//cdn.jsdelivr.net/uikit/2.27.2/css/uikit.min.css" />
@@ -44,37 +50,78 @@
 		</div>
 	</div>
 
-
-
-	<div class="uk-block uk-block-default">
-		<div class="uk-container uk-container-center">
-			<div class="uk-grid">
-				<div class="uk-width-large-1-10 uk-hidden-medium uk-hidden-small"></div>
-				<div id="articleContainer" class="uk-width-large-8-10 uk-width-medium-1-1 uk-width-small-1-1">
+<div class="uk-block uk-block-default">
+	<div class="uk-container uk-container-center">
+		<div class="uk-grid">
+			<div class="uk-width-large-1-10 uk-hidden-medium uk-hidden-small"></div>
+			<div class="uk-width-large-8-10 uk-width-medium-1-1 uk-width-small-1-1">
+				<article class="uk-article">
+					<h1 class="uk-article-title" style="font-size: 23px;">
+						First
+					</h1>
 					
-							<article class="uk-article">
-	<div class="uk-panel uk-panel-hover">
-	<h2 class="uk-article-title">
-		<a href="https://zhiweinibajian.github.io/post/">Posts</a>
-	</h2>
-  
-	
-  
-	<p class="uk-article-meta">
-		Post on Fri, May 22, 2020 | 
-	</p>
-	</div>
-</article>
-
-					
+					<p class="uk-article-meta">Posted on Fri, May 22, 2020 | </p>
 
           
-
-				</div>
-				<div class="uk-width-large-1-10 uk-hidden-medium uk-hidden-small"></div>
+					
+          
+				</article>
 			</div>
+			<div class="uk-width-large-1-10 uk-hidden-medium uk-hidden-small"></div>
 		</div>
+    <div class="uk-grid">
+      <div class="uk-width-large-1-10"></div>
+      <div class="uk-width-large-8-10">
+        <ul class="uk-pagination">
+          
+          
+        </ul>
+      </div>
+      <div class="uk-width-large-1-10"></div>
+    </div>
+    <div class="uk-grid">
+      <div class="uk-width-large-1-10"></div>
+      <div class="uk-width-large-8-10">
+        <div class="uk-panel uk-panel-box uk-panel-box-secondary">
+          <h3 class="uk-panel-title">Related Posts</h3>
+          
+          
+          <ul class="uk-list uk-list-striped">
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+          </ul>
+        </div>
+      </div>
+      <div class="uk-width-large-1-10"></div>
+    </div>
+    <div class="uk-grid">
+      <div class="uk-width-large-1-10"></div>
+      <div class="uk-width-large-8-10">
+        <div id="disqus_thread" data-uk-scrollspy></div>
+      </div>
+      <div class="uk-width-large-1-10"></div>
+    </div>
 	</div>
+</div>
 
 	<div id="footer" class="uk-block uk-block-large uk-block-muted" data-uk-scrollspy="{repeat: true, delay: 600}">
 		<div class="uk-container uk-container-center">
@@ -110,16 +157,4 @@
 </html>
 
 
-<script>
-(function () {
-  var loadPage =  1 ;
-  var totalPages =  1 ;
-  $('#footer[data-uk-scrollspy]').on('inview.uk.scrollspy', function () {
-    loadPage = loadPage + 1;
-    if (loadPage > totalPages) { return; }
-    $.get('/page/' + loadPage, function (result) {
-      $('#articleContainer').append('<hr class="uk-grid-divider">').append($(result).find('article'));
-    })
-  })
-})();
-</script>
+
