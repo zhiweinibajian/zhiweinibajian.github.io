@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-dev1 change 3
-=======
-master change1
->>>>>>> master change 1
-=======
-master change1
->>>>>>> 60a2cb06faf81b5b08ab4d6d7710dab2c29dddc9
