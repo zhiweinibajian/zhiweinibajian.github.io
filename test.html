@@ -1,27 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>新少到此一游</title>
-    <meta name="keywords" content="新少到此一游" />
-    <meta name="description" content="新少到此一游" />
-    <meta property="og:type" content="website">
-    <meta property="og:title"
-        content="新少到此一游">
-    <meta property="og:description" content="新少到此一游">
-    <meta property="og:image" content="https://pbs.twimg.com/semantic_core_img/1255568341697130496/CoyhRZev?format=jpg&name=240x240">
-    <meta property="og:image:width" content="1280">
-    <meta property="og:image:height" content="720">
-    <meta name="twitter:title"
-        content="新少到此一游">
-    <meta name="twitter:description" content="新少到此一游">
-    <meta name="twitter:image" content="https://pbs.twimg.com/semantic_core_img/1255568341697130496/CoyhRZev?format=jpg&name=240x240">
-    <meta name="twitter:card" content="summary_large_image">
-</head>
-<body>
-  <a href="https://twitter.com/share?url=https://zhiweinibajian.github.io/test.html&text=新少" target="_blank">
-    share Twitter
-</a>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/5.0.2/screenfull.min.js"></script>
+  </head>
+  <body>
+    <button id="button">click</button>
+    <script>
+      document.getElementById("button").onclick = () => {
+        showNotification("hello world", "06/29")
+      }
+      function showNotification(text, title) {
+        if (!("Notification" in window)) {
+          // showToast('error', '不支持桌面消息提送功能');
+          return
+        }
+
+        const notifyConfig = {
+          body: text,
+          icon: "https://p.ssl.qhimg.com/dmfd/400_300_/t0120b2f23b554b8402.jpg",
+        }
+
+        // console.log(window).Notification.permission);
+        if (
+          window.Notification &&
+          window.Notification.permission !== "denied"
+        ) {
+          // if (window).Notification) {
+          window.Notification.requestPermission(function (status) {
+            if (status === "granted") {
+              // 使用者同意授权
+              var notification = new Notification(title, notifyConfig) // 建立通知
+
+              notification.onclick = function (e) {
+                //点击消息推送
+                e.preventDefault()
+                window.open("http://www.baidu.com")
+              }
+
+              notification.onerror = function (e) {
+                // 消息推送报错
+                console.log("消息桌面推送报错了")
+              }
+
+              const timer = setTimeout(() => {
+                notification.close() // 消息推送关闭
+                // clearTimeout(timer);
+              }, 3000)
+            }
+          })
+        }
+      }
+    </script>
+  </body>
 </html>
